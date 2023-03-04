@@ -1,5 +1,77 @@
+<<<<<<< Updated upstream
 baseURL: "https://ihavenoideaa.github.io/hideaway-Pages/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 title: PaperMod
 paginate: 5
 theme: hugo-PaperMod
+=======
+baseURL: "https://ihavenoideaa.github.io/" #"https://ihavenoideaa.github.io/hideaway-Pages/" 
+title:                              阅读观影记录
+paginate:                           5
+theme:                              hugo-PaperMod
+languageCode:                       zh-cn
+defaultContentLanguage:             zh-cn # 最顶部首先展示的语言页面
+defaultContentLanguageInSubdir:     true
+enableEmoji:                        true  # 允许使用Emoji表情
+enableRobotsTXT:                    true
+enableInlineShortcodes:             true
+hasCJKLanguage:                     true  # 自动检测是否包含中文日文韩文,如果文章中使用了很多中文引号的话可以开启
+buildDrafts:                        false
+buildFuture:                        false
+buildExpired:                       false
+pygmentsUseClasses:                 true
+# googleAnalytics: UA-123-45
+>>>>>>> Stashed changes
 
+minify:
+    disableXML: true
+    # minifyOutput: true
+
+permalinks:
+      post: "/:title/"
+
+outputs:
+      home:
+            - HTML
+            - RSS
+            - JSON
+
+params: 
+      defaultTheme:           light       # 默认dark/light
+      disableThemeToggle:     false       # 不允许切换dark/light  
+      ShowReadingTime:        true        # 显示阅读时间
+      ShowShareButtons:       false       # 显示帖子分享栏
+      ShowBreadCrumbs:        false       # 面包屑导航栏
+      ShowPostNavLinks:       false       # 显示上一个/下一个帖子
+      ShowCodeCopyButtons:    true        # 代码复制按钮
+      disableSpecial1stPost:  false       # 禁用第一个帖子的非卡片风格
+      disableScrollToTop:     false       # 禁用回到顶部按钮
+      comments:               false       # 开启评论
+      #author: ["Me", "You"]              # 作者
+      ShowToc:                false        # 显示文章目录
+      TocOpen:                false       # 文章目录默认打开/关闭
+      ShowWordCount:          true        # 显示字数统计
+      
+      description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+      
+      cover:                              # 封面图属性
+            linkFullImages:   false       # 点击图片显示完整尺寸        
+            responsiveImages: false       # HTML5 字段自动提供多种尺寸的图像(耗时)
+      assets:
+            favicon:                "image/favicon.ico"
+            favicon16x16:           "image/favicon.ico"
+            favicon32x32:           "image/favicon.ico"
+            apple_touch_icon:       "image/favicon.ico"
+            safari_pinned_tab:      "image/favicon.ico"
+
+
+menu:                               # 菜单
+  main:
+    - identifier: categories
+      name:       分类
+      url:        /categories/
+      weight:     1
+
+    - identifier: archives
+      name:       归档
+      url:        /archives/
+      weight:     2   
