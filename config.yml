@@ -1,10 +1,4 @@
-<<<<<<< Updated upstream
-baseURL: "https://ihavenoideaa.github.io/hideaway-Pages/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-title: PaperMod
-paginate: 5
-theme: hugo-PaperMod
-=======
-baseURL: "https://ihavenoideaa.github.io/" #"https://ihavenoideaa.github.io/hideaway-Pages/" 
+baseURL: "https://pm.xzgl.site/"
 title:                              阅读观影记录
 paginate:                           5
 theme:                              hugo-PaperMod
@@ -20,7 +14,6 @@ buildFuture:                        false
 buildExpired:                       false
 pygmentsUseClasses:                 true
 # googleAnalytics: UA-123-45
->>>>>>> Stashed changes
 
 minify:
     disableXML: true
