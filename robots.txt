@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://ihavenoideaa.github.io/sitemap.xml

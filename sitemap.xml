@@ -2,18 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ihavenoideaa.github.io/hideaway-Pages/archives.fr/</loc>
+    <loc>https://ihavenoideaa.github.io/posts/quote/</loc>
   </url><url>
-    <loc>https://ihavenoideaa.github.io/hideaway-Pages/archives/</loc>
+    <loc>https://ihavenoideaa.github.io/posts/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
   </url><url>
-    <loc>https://ihavenoideaa.github.io/hideaway-Pages/categories/</loc>
+    <loc>https://ihavenoideaa.github.io/posts/second/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
   </url><url>
-    <loc>https://ihavenoideaa.github.io/hideaway-Pages/</loc>
+    <loc>https://ihavenoideaa.github.io/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
   </url><url>
-    <loc>https://ihavenoideaa.github.io/hideaway-Pages/search/</loc>
+    <loc>https://ihavenoideaa.github.io/categories/</loc>
   </url><url>
-    <loc>https://ihavenoideaa.github.io/hideaway-Pages/search.fr/</loc>
+    <loc>https://ihavenoideaa.github.io/search/</loc>
   </url><url>
-    <loc>https://ihavenoideaa.github.io/hideaway-Pages/tags/</loc>
+    <loc>https://ihavenoideaa.github.io/tags/</loc>
+  </url><url>
+    <loc>https://ihavenoideaa.github.io/archives/</loc>
+  </url><url>
+    <loc>https://ihavenoideaa.github.io/books/</loc>
   </url>
 </urlset>
