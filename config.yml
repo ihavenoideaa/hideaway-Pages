@@ -59,12 +59,27 @@ params:
 
 menu:                               # 菜单
   main:
+    - identifier: books
+      name:       阅读
+      url:        /books/
+      weight:     1
+
+    - identifier: movies
+      name:       观影
+      url:        /movies/
+      weight:     2
+
     - identifier: categories
       name:       分类
       url:        /categories/
-      weight:     1
+      weight:     3
 
     - identifier: archives
       name:       归档
       url:        /archives/
-      weight:     2   
+      weight:     4
+
+    - identifier: bbs
+      name:       bbs
+      url:        /bbs/
+      weight:     5   

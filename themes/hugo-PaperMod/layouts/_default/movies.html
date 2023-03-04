@@ -1,4 +1,4 @@
-{{- define "main" }}
+{{ define "main" }}
 <div class="post">
   <h2 class="post-title">{{.Title}}</h2>
   <br/>
@@ -55,13 +55,15 @@
     });
   </script>
 <div class="lg:col-start-2 lg:col-span-6">
-  {{$items := getCSV "," "data/douban/done/book.csv" }}
+  {{$items := getCSV "," "data/douban/done/movie.csv" }}
   <div class="sc-ksluID gFnzgG">
     <div class="sc-bdnxRM">
+	
       <a href="javascript:void 0;" class="sc-gtsrHT kEoOHR" data-search="year" data-method="equal" data-value="">全部</a>
-      {{range $year := (seq now.Year -1 2023)}}
+      {{range $year := (seq now.Year -1 2018)}}
       <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="year" data-method="equal" data-value="{{$year}}">{{$year}}</a>
       {{end}}
+	  <font size=1 color=#555>（观影时间）</font>
     </div>
     <div class="sc-bdnxRM">
       <a href="javascript:void 0;" class="sc-gtsrHT kEoOHR" data-search="star" data-method="equal" data-value="">全部</a>
@@ -71,6 +73,7 @@
       <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="star" data-method="equal" data-value="2">二星</a>
       <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="star" data-method="equal" data-value="1">一星</a>
       <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="star" data-method="equal" data-value="0">零星</a>
+	    <font size=1 color=#555>（我的评分）</font>
     </div>
     <div class="jvCTkj sort-by">
       <a href="javascript:void 0;" class="sort-by-item active" data-order="time">时间排序</a>
@@ -79,15 +82,13 @@
     <div class="sc-dIsUp fIuTG">
       {{range $idx,$item := $items}}
       {{if ne $idx 0}}
-        {{$rating := 0}}
-        {{if index $item 6 }}
-          {{ $rating = float (index $item 6) }}
-        {{end}}
+        {{ $rating := float (index $item 6)}}
       <div 
         class="sc-gKAaRy dfdORB" 
         data-year="{{index $item 11}}" 
         data-star="{{index $item 8}}"
         data-rating="{{$rating}}"
+        data-genres="{{index $item 7}}"
       >
           <div class="sc-hKFxyN HPRth">
             <div class="lazyload-wrapper">

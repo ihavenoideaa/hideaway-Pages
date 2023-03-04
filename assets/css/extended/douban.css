@@ -1,5 +1,5 @@
 img {
-	border-radius: 4px;
+	border-radius: 5px;
 	display: inline-block;
 	max-width: 100%
 }
@@ -27,12 +27,13 @@ img.center,img.right {
 .gaztka{margin-right:1px;width:12px;height:12px;color:#eee}
 .iibjPt{margin-left:5px;color:#555;font-size:14px}
 .jvCTkj{margin-bottom:10px}
-.kEoOHR{display:inline-block;margin-right:15px;text-decoration:none;color:#157efb}
-.dvtjjf{display:inline-block;color:#555;text-decoration:none;padding:0 5px}
+.kEoOHR{display:inline-block;margin-right:15px;text-decoration:none;color:#157efb;font-size:17px;}
+.kEoOHR.active{background:rgba(85,85,85,.1)}
+.dvtjjf{display:inline-block;color:#555;text-decoration:none;padding:0 5px;font-size:17px}
 .dvtjjf.active{background:rgba(85,85,85,.1)}
 .hide{display:none}
-.sort-by{text-align:right;margin-top:-15px}
-.sort-by-item{margin-left:10px;padding:0 5px;line-height:20px}
+.sort-by{text-align:right;margin-top:0px}
+.sort-by-item{margin-left:10px;padding:0 5px;line-height:20px;font-size:15px}
 .sort-by-item.active{background:rgba(85,85,85,.1)}
 .sort-by-item svg{margin-right:5px}
 .sc-hKFxyN img{max-width:100%!important;height:auto!important;display:block!important;vertical-align:middle!important}
