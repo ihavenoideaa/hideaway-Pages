@@ -15,12 +15,19 @@ buildExpired:                       false
 pygmentsUseClasses:                 true
 # googleAnalytics: UA-123-45
 
+ignoreErrors: ["error-remote-getjson","error-remote-getcsv"]     # 忽略错误
+
 minify:
     disableXML: true
     # minifyOutput: true
 
 permalinks:
       post: "/:title/"
+
+taxonomies:
+          category: categories
+          tag: tags
+          series: series
 
 outputs:
       home:
@@ -40,7 +47,7 @@ params:
       disableScrollToTop:     false       # 禁用回到顶部按钮
       comments:               false       # 开启评论
       #author: ["Me", "You"]              # 作者
-      ShowToc:                false        # 显示文章目录
+      ShowToc:                false       # 显示文章目录
       TocOpen:                false       # 文章目录默认打开/关闭
       ShowWordCount:          true        # 显示字数统计
       
@@ -50,12 +57,15 @@ params:
             linkFullImages:   false       # 点击图片显示完整尺寸        
             responsiveImages: false       # HTML5 字段自动提供多种尺寸的图像(耗时)
       assets:
-            favicon:                "image/favicon.ico"
-            favicon16x16:           "image/favicon.ico"
-            favicon32x32:           "image/favicon.ico"
-            apple_touch_icon:       "image/favicon.ico"
-            safari_pinned_tab:      "image/favicon.ico"
-
+            favicon:                "icon/favicon.ico"
+            favicon16x16:           "icon/favicon.ico"
+            favicon32x32:           "icon/favicon.ico"
+            apple_touch_icon:       "icon/favicon.ico"
+            safari_pinned_tab:      "icon/favicon.ico"
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
 
 menu:                               # 菜单
   main:

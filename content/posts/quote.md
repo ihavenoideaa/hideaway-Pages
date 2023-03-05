@@ -1,7 +1,7 @@
 ---
 title: "书山有路勤为径"
-description: ""
-# date: 2023-03-04T15:47:09+08:00
+description: "读过一本好书,像交了一个益友"
+date: 2023-03-04T15:47:09+08:00
 draft:              false               # 草稿模式
 weight:             1
 ShowReadingTime:    false               # 阅读时间
@@ -14,7 +14,6 @@ cover:                                  # 封面图
     relative:   "https://blog.xzgljiang.com/" # To use relative path for cover image, used in hugo Page-bundles
 ---
 
+{{< innerlink src="posts/second.md" >}}  
 
-```
-读过一本好书,像交了一个益友
-```
+读书有用

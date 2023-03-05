@@ -6,6 +6,15 @@
 <!-- 豆瓣显示图片-->
 <meta name="referrer" content="no-referrer">
 
+<!--瀑布流js-->
+<script type="text/javascript" src="/waterfall.min.js"></script>
+<script type="text/javascript" src="/imgStatus.min.js"></script>
+<!--灯箱js-->
+<script type="text/javascript" src="/view-image.js"></script>
+<!--相对时间-->
+<script type="text/javascript" src="/lately.min.js"></script>
+<script type="text/javascript" src="/custome.js"></script>
+
 {{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) }}
 <meta name="robots" content="index, follow">
 {{- else }}

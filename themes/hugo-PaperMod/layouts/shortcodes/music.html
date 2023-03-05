@@ -1,0 +1,42 @@
+  <!--样式1
+  <figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
+    <audio controls preload="{{ .Get "preload" | default "metadata" }}">
+      {{ with .Get "src" }}<source src="{{ . | relURL }}" type="audio/mpeg">{{ end }}
+    </audio>
+    {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure> 
+  -->
+
+    <!--样式2 
+    <div class="container">
+        <audio controls style="width: 100%; margin-bottom: 20px">
+            {{ with .Get "ogg" }}<source src="{{ . }}" type="audio/ogg">{{ end }}
+            {{ with .Get "mp3" }}<source src="{{ . }}" type="audio/mpeg">{{ end }}
+            {{ with .Get "wav" }}<source src="{{ . }}" type="audio/wav">{{ end }}
+            Your browser does not support the audio element.
+        </audio>
+        </div> -->
+
+
+    <!-- require APlayer -->
+<script type="text/javascript" src="/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+
+<!-- 注意！！我因为APlayer与meting-js都是以插件形式引入的，所以不需要写上面这些 -->
+{{ if .IsNamedParams }}
+    <meting-js
+      id="{{ .Get "id" }}"
+      server="{{ .Get "server" }}"
+      type="{{ .Get "type" }}"
+      fixed="{{ if .Get "fixed" }}{{ .Get "fixed" }}{{ else }}false{{ end }}"
+      mini="{{ if .Get "mini" }}{{ .Get "mini" }}{{ else }}false{{ end }}"
+      autoplay="{{ if .Get "autoplay" }}{{ .Get "autoplay" }}{{ else }}false{{ end }}"
+      loop="{{ if .Get "loop" }}{{ .Get "loop" }}{{ else }}none{{ end }}"
+      theme="{{ if .Get "autoplay" }}{{ .Get "autoplay" }}{{ else }}#255579{{ end }}"
+      volume="{{ if .Get "volume" }}{{ .Get "volume" }}{{ else }}0.6{{ end }}"
+      prelosd="{{ if .Get "prelosd" }}{{ .Get "prelosd" }}{{ else }}auto{{ end }}"
+      mutex="{{ if .Get "mutex" }}{{ .Get "mutex" }}{{ else }}true{{ end }}"
+      list-folded="{{ if .Get "list-folded" }}{{ .Get "list-folded" }}{{ else }}true{{ end }}">
+    </meting-js>
+{{ end }}
