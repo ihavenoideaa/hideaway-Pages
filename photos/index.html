@@ -18,11 +18,11 @@
 <script type="text/javascript" src="/lately.min.js"></script>
 <script type="text/javascript" src="/custome.js"></script>
 <meta name="robots" content="index, follow">
-<title>我的阅读 | 阅读观影记录</title>
+<title>我的相册 | 阅读观影记录</title>
 <meta name="keywords" content="">
-<meta name="description" content="我的阅读 - 阅读观影记录">
+<meta name="description" content="我的相册 - 阅读观影记录">
 <meta name="author" content="">
-<link rel="canonical" href="https://pm.xzgl.site/books/">
+<link rel="canonical" href="https://pm.xzgl.site/photos/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.18a6a3bbda050359791e348e64bcb965c34be5aa94675e604a4ac04d998fe9f4.css" integrity="sha256-GKaju9oFA1l5HjSOZLy5ZcNL5aqUZ15gSkrATZmP6fQ=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -41,15 +41,15 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="我的阅读" />
+</noscript><meta property="og:title" content="我的相册" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pm.xzgl.site/books/" /><meta property="article:section" content="" />
+<meta property="og:url" content="https://pm.xzgl.site/photos/" /><meta property="article:section" content="" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="我的阅读"/>
+<meta name="twitter:title" content="我的相册"/>
 <meta name="twitter:description" content=""/>
 
 
@@ -61,8 +61,8 @@
     {
       "@type": "ListItem",
       "position":  1 ,
-      "name": "我的阅读",
-      "item": "https://pm.xzgl.site/books/"
+      "name": "我的相册",
+      "item": "https://pm.xzgl.site/photos/"
     }
   ]
 }
@@ -71,8 +71,8 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "我的阅读",
-  "name": "我的阅读",
+  "headline": "我的相册",
+  "name": "我的相册",
   "description": "",
   "keywords": [
     
@@ -84,7 +84,7 @@
   "dateModified": "0001-01-01T00:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://pm.xzgl.site/books/"
+    "@id": "https://pm.xzgl.site/photos/"
   },
   "publisher": {
     "@type": "Organization",
@@ -136,7 +136,7 @@
         <ul id="menu">
             <li>
                 <a href="https://pm.xzgl.site/books/" title="阅读">
-                    <span class="active">
+                    <span>
                     <strong>阅读</strong>
                     </span>
                 </a>
@@ -172,117 +172,75 @@
         </ul>
     </nav>
 </header>
-<main class="main">
-<div class="post">
-  <h2 class="post-title">我的阅读</h2>
-  <br/>
-  <script type="text/javascript">
-    function search(e) {
-      document.querySelectorAll('.dfdORB').forEach(item => item.classList.add('hide'));
-      document.querySelector(`.dvtjjf.active[data-search="${e.target.dataset.search}"]`)?.classList.remove('active');
-      if(e.target.dataset.value) {
-        e.target.classList.add('active');
-      }
-      const searchItems = document.querySelectorAll('.dvtjjf.active');
-      const attributes = Array.from(searchItems, searchItem => {
-        const property = `data-${searchItem.dataset.search}`;
-        const logic = searchItem.dataset.method === 'contain' ? '*' : '^';
-        const value = searchItem.dataset.method === 'contain' ? `${searchItem.dataset.value}` : searchItem.dataset.value;
-        return `[${property}${logic}='${value}']`;
-      });
-      const selector = `.dfdORB${attributes.join('')}`;
-      document.querySelectorAll(selector).forEach(item => item.classList.remove('hide'));
-    }
-    window.addEventListener('click', function(e) {
-      if(e.target.classList.contains('sc-gtsrHT')) {
-        e.preventDefault();
-        search(e);
-      }
-    });
-    function sort(e) {
-      const sortBy = e.target.dataset.order;
-      const style = document.createElement('style');
-      style.classList.add('sort-order-style');
-      document.querySelector('style.sort-order-style')?.remove();
-      document.querySelector('.sort-by-item.active')?.classList.remove('active');
-      e.target.classList.add('active');
-      if(sortBy === 'rating') {
-        const items = Array.from(document.querySelectorAll('.dfdORB'));
-        items.sort((itemA, itemB) => {
-          const ratingA = parseFloat(itemA.dataset.rating) || 0;
-          const ratingB = parseFloat(itemB.dataset.rating) || 0;
-          if(ratingA === ratingB) {
-            return 0;
+<main class="content">
+  <div id="album" style="width: 100%;"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      var memoUrl = "https://me.edui.fun/"                        
+      var galleryUrl = memoUrl+"api/memo/all?rowStatus=NORMAL&tag=相册"
+      fetch(galleryUrl).then(res => res.json()).then( resdata =>{
+          var result = '',resultAll="",data = resdata.data
+          for(var i=0;i < data.length;i++){
+              var galleryTitle = data[i].content.replace("#相册 ",'')
+              var imgs = galleryTitle.match(/\!\[(.*?)\s*(.*?)\]\((.*?)\)/g)
+              
+              if(imgs){
+                imgs.forEach(item => {
+                  let img = item.replace(/!\[.*?\]\((.*?)\)/g,'$1'),
+                      time, title, tmp = item.replace(/!\[(.*?)\]\(.*?\)/g,'$1');
+                  if (tmp.indexOf(' ') != -1) {
+                      time = tmp.split(' ')[0];
+                      title = tmp.split(' ')[1];
+                  } else title = tmp
+                  result += `<div class="gallery-photo"><img class="photo-img" loading='lazy' decoding="async" src="${img}"></a>`;
+                  title ? result += `<span class="photo-title">${title}</span>` : '';
+                  time ? result += `<span class="photo-time">${time}</span>` : '';
+                  result += `</div>`;
+                });
+              }
+              
+              if(data[i].resourceList && data[i].resourceList.length > 0){
+                var resourceList = data[i].resourceList;
+                for(var j=0;j < resourceList.length;j++){
+                  var galleryTime = new Date(resourceList[j].createdTs * 1000).toLocaleString()
+                  var restype = resourceList[j].type.slice(0,5);
+                  var resexlink = resourceList[j].externalLink
+                  var resLink = ''
+                  if(resexlink){
+                    resLink = resexlink
+                  }else{
+                    resLink = memoUrl+'o/r/'+resourceList[j].id+'/'+resourceList[j].filename
+                  }
+                  if(restype == 'image'){
+                      result += '<div class="gallery-photo"><img class="photo-img" loading="lazy" decoding="async" src="'+resLink+'"/><span class="photo-title">'+galleryTitle+'</span><span class="photo-time">'+galleryTime+'</span></div>'
+                  }
+                }
+              }
           }
-          return ratingA > ratingB ? -1 : 1;
-        });
-        const stylesheet = items.map((item, idx) => `.dfdORB[data-rating="${item.dataset.rating}"] { order: ${idx}; }`).join('\r\n');
-        style.innerHTML = stylesheet;
-        document.body.appendChild(style);
-      }
-    }
-    window.addEventListener('click', function(e) {
-      if(e.target.classList.contains('sort-by-item')) {
-        e.preventDefault();
-        sort(e);
-      }
-    });
-  </script>
-<div class="lg:col-start-2 lg:col-span-6">
-  
-  <div class="sc-ksluID gFnzgG">
-    <div class="sc-bdnxRM">
-      <a href="javascript:void 0;" class="sc-gtsrHT kEoOHR" data-search="year" data-method="equal" data-value="">全部</a>
-      
-      <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="year" data-method="equal" data-value="2023">2023</a>
-      
-    </div>
-    <div class="sc-bdnxRM">
-      <a href="javascript:void 0;" class="sc-gtsrHT kEoOHR" data-search="star" data-method="equal" data-value="">全部</a>
-      <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="star" data-method="equal" data-value="5">五星</a>
-      <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="star" data-method="equal" data-value="4">四星</a>
-      <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="star" data-method="equal" data-value="3">三星</a>
-      <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="star" data-method="equal" data-value="2">二星</a>
-      <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="star" data-method="equal" data-value="1">一星</a>
-      <a href="javascript:void 0;" class="sc-gtsrHT dvtjjf" data-search="star" data-method="equal" data-value="0">零星</a>
-    </div>
-    <div class="jvCTkj sort-by">
-      <a href="javascript:void 0;" class="sort-by-item active" data-order="time">时间排序</a>
-      <a href="javascript:void 0;" class="sort-by-item" data-order="rating">评分排序</a>
-    </div>
-    <div class="sc-dIsUp fIuTG">
-      
-      
-      
-      
-        
-        
+          var galleryDom = document.querySelector('#album');
+          var galleryBefore = `<div class="gallery-photos page">`
+          var galleryAfter = `</div>`
+          resultAll = galleryBefore + result + galleryAfter
+          galleryDom.innerHTML = resultAll
+          //相册排版
+          imgStatus.watch('.photo-img', function(imgs) {
+            if(imgs.isDone()){
+              waterfall('.gallery-photos');
+              let pagePhoto = document.querySelectorAll('.gallery-photo');
+              for(var i=0;i < pagePhoto.length;i++){pagePhoto[i].className += " visible"};
+            }
+          });
+          window.addEventListener('resize', function () {
+            waterfall('.gallery-photos');
+          });
           
-        
-      <div 
-        class="sc-gKAaRy dfdORB" 
-        data-year="2023-03-02 16:18:26" 
-        data-star="5"
-        data-rating="8.5"
-      >
-          <div class="sc-hKFxyN HPRth">
-            <div class="lazyload-wrapper">
-              <img class="avatar" src="https://img1.doubanio.com/view/subject/l/public/s33701869.jpg" referrer-policy="no-referrer" decoding="async" loading="lazy" alt=""  title="鲁滨逊漂流记" width="150" height="220">
-            </div>
-          </div>
-          <div class="sc-fujyAs eysHZq">
-            <div class="rating"><span class="allstardark"><span class="allstarlight" style="width:85%"></span></span><span class="rating_nums">8.5</span></div>
-          </div>
-          <div class="sc-iCoGMd kMthTr"><a rel="link" href="https://book.douban.com/subject/1832460/" target="_blank">鲁滨逊漂流记</a></div>
-      </div>
-      
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
+          window.ViewImage && ViewImage.init('.gallery-photo img')
+          
+          window.Lately && Lately.init({ target: '.photo-time'});
+      });
+  });
+  </script>
     </main>
     
 
