@@ -1,11 +1,12 @@
 ---
-title: "second"
+title: "Shortcodes"
 description: "样式存放"
 date: 2023-03-04T15:47:09+08:00
-draft: false                            # 草稿模式  
+draft: true                            # 草稿模式  
 tags: ["main"]
 categories: ["intro"]
 series: ["no"]
+ShowToc: true
 ---
 一些效果展示
 
@@ -44,11 +45,17 @@ series: ["no"]
 3. [quote]({{< relref "quote.md" >}})
 
 
-### 音乐播放模块
-<!--{/{< music src="/audio/topgun.mp3" caption="Caption" >}}<!--样式1 短-->
-<!--{{< music mp3="/audio/topgun.mp3">}} <!--样式2 长-->    
- {{< music id="002e4D4n44U4zE" type="song" server="tencent" >}}
+### 音乐播放模块 
+ {{< music/music id="002e4D4n44U4zE" type="song" server="tencent" >}}
 
+<!--{{< music/netease 64803 0 >}}<!--1:自动播放，0：手动  会出现很多错误，但不影响使用-->
+
+
+{{< music/music-simple-long mp3="/audio/topgun.mp3">}}
+
+{{< music/music-simple-short src="/audio/topgun.mp3" caption="标题" >}}
+
+{{< music/podcast src="https://file.yandaojiang.com/blog/music/topgun.mp3" img="https://file.yandaojiang.com/blog/music/1.png" >}}
 
 ### gist
 {{< gist spf13 7896402 >}}  <!--# gist仓库 https://gist.github.com/spf13/7896402-->
@@ -65,10 +72,19 @@ series: ["no"]
 </section>
 {{< /highlight >}}
 
+### 块引用
+{{< blockquote author="电影" link="https://irithys.com" title="《寻梦环游记》" >}}
+死亡不是一切的终点，遗忘才是
+{{< /blockquote >}}
+
+
 ### 终端短代码
 {{< terminal "yandaojiang@Daojiang-macbook-pro" >}} [ydj-macbook-pro ~ % wget google.com --2023-01-28 16:21:18-- http://google.com/ 正在解析主机 google.com (google.com)... 198.18.4.194 正在连接 google.com (google.com)|198.18.4.194|:80... 已连接。 已发出 HTTP 请求，正在等待回应... 301 Moved Permanently 位置：http://www.google.com/ [跟随至新的 URL] --2023-01-28 16:21:18-- http://www.google.com/ 正在解析主机 www.google.com (www.google.com)... 198.18.0.13 正在连接 www.google.com (www.google.com)|198.18.0.13|:80... 已连接。 已发出 HTTP 请求，正在等待回应... 200 OK 长度：未指定 [text/html] 正在保存至: “index.html”
 index.html [ <=> ] 14.67K --.-KB/s 用时 0.07s
 2023-01-28 16:21:19 (209 KB/s) - “index.html” 已保存 [15021] [ydj-macbook-pro ~ % {{< /terminal >}}
+
+### bilibli
+<!--{{< bilibili BV1NF411J7JH >}}-->
 
 ### ppt短代码
 {{< ppt src="https://www.sulvblog.cn//ppt/%E6%9C%80%E5%85%A8Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8.pdf" >}} 

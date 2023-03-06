@@ -1,29 +1,8 @@
-  <!--样式1
-  <figure {{ with .Get "class" }}class="{{ . }}"{{ end }}>
-    <audio controls preload="{{ .Get "preload" | default "metadata" }}">
-      {{ with .Get "src" }}<source src="{{ . | relURL }}" type="audio/mpeg">{{ end }}
-    </audio>
-    {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
-  </figure> 
-  -->
-
-    <!--样式2 
-    <div class="container">
-        <audio controls style="width: 100%; margin-bottom: 20px">
-            {{ with .Get "ogg" }}<source src="{{ . }}" type="audio/ogg">{{ end }}
-            {{ with .Get "mp3" }}<source src="{{ . }}" type="audio/mpeg">{{ end }}
-            {{ with .Get "wav" }}<source src="{{ . }}" type="audio/wav">{{ end }}
-            Your browser does not support the audio element.
-        </audio>
-        </div> -->
-
-
-    <!-- require APlayer -->
+<!-- require APlayer -->
 <script type="text/javascript" src="/APlayer.min.js"></script>
 <!-- require MetingJS -->
 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
 
-<!-- 注意！！我因为APlayer与meting-js都是以插件形式引入的，所以不需要写上面这些 -->
 {{ if .IsNamedParams }}
     <meting-js
       id="{{ .Get "id" }}"

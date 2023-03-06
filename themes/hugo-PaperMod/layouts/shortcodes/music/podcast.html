@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/speed/speed.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css">  
+</head>
+<body>
+<meta charset="UTF-8">
+<div class="container">
+    <div class="podcast">
+      <h3 class="podcast__episode_title">Debugging Tools + Tips</h3>
+      <h5 class="podcast__title">
+        Syntax.fm
+        <i>Episode 152</i>
+      </h5>
+      <div class="podcast__meta">
+        <audio controls width="100%" id="podcast">
+            <source src="{{ .Get "src" }}">
+             Your browser does not support the audio tag.
+        </audio>
+        <a href="#" class="artwork">
+            <img src="{{ .Get "img" }}" alt="image loading...">
+        </a>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ivorpad/mediaelement-changespeed/changespeed.js"></script>
+
+
+<script>
+/* podcast */
+
+
+const options = {
+  defaultSpeed: '1.00',
+  speeds: ['1.25','1.50', '2.00', '0.75'],
+  loop: true,
+  skipBackInterval: 15,
+  jumpForwardInterval: 15,
+  features: [
+    "playpause",
+    "progress",
+    "current",
+    "duration",
+    "skipback",
+    "changespeed",
+    "volume",
+    "jumpforward",
+  ]
+}
+
+new MediaElementPlayer(
+  document.querySelector("#podcast"),
+  options
+ );
+
+// Separate the audio controls so I can style them better.
+(() => {
+	const elementTop = document.createElement('div');
+  const elementBottom = document.createElement('div');
+	elementTop.classList.add('mejs-prepended-buttons');
+  elementBottom.classList.add('mejs-appended-buttons');
+
+	const controls = document.querySelector('.mejs__controls');
+	controls.prepend(elementTop);
+  controls.append(elementBottom);
+  
+	const controlsChildren = Array.from(controls.childNodes).filter(v => v.className.startsWith("mejs_"));
+
+  controlsChildren.slice(0, 3).forEach(elem => {
+     elementTop.append(elem)
+  });
+  
+  controlsChildren.slice(3, controlsChildren.length).forEach(elem => {
+    elementBottom.append(elem)
+  })
+})()
+/* podcast end */
+
+</script>
+
+</body>
+</html>
