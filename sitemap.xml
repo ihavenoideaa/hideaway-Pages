@@ -2,48 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pm.xzgl.site/posts/quote/</loc>
-    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+    <loc>https://une.xzgl.site/posts/quote/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/categories/</loc>
-    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+    <loc>https://une.xzgl.site/categories/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/categories/intro/</loc>
-    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+    <loc>https://une.xzgl.site/posts/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/tags/main/</loc>
-    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+    <loc>https://une.xzgl.site/search/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/series/no/</loc>
-    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+    <loc>https://une.xzgl.site/series/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/posts/</loc>
-    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+    <loc>https://une.xzgl.site/tags/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/posts/second/</loc>
-    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+    <loc>https://une.xzgl.site/bbs/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/series/</loc>
-    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+    <loc>https://une.xzgl.site/about/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/tags/</loc>
-    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+    <loc>https://une.xzgl.site/archives/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/</loc>
-    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+    <loc>https://une.xzgl.site/movies/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/search/</loc>
+    <loc>https://une.xzgl.site/gallery/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/bbs/</loc>
+    <loc>https://une.xzgl.site/photos/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/archives/</loc>
+    <loc>https://une.xzgl.site/books/</loc>
   </url><url>
-    <loc>https://pm.xzgl.site/movies/</loc>
-  </url><url>
-    <loc>https://pm.xzgl.site/gallery/</loc>
-  </url><url>
-    <loc>https://pm.xzgl.site/photos/</loc>
-  </url><url>
-    <loc>https://pm.xzgl.site/books/</loc>
+    <loc>https://une.xzgl.site/</loc>
   </url>
 </urlset>

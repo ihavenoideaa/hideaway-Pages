@@ -2,73 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>阅读观影记录</title>
-    <link>https://pm.xzgl.site/</link>
+    <link>https://une.xzgl.site/</link>
     <description>Recent content on 阅读观影记录</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sat, 04 Mar 2023 15:47:09 +0800</lastBuildDate><atom:link href="https://pm.xzgl.site/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language><atom:link href="https://une.xzgl.site/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>书山有路勤为径</title>
-      <link>https://pm.xzgl.site/posts/quote/</link>
-      <pubDate>Sat, 04 Mar 2023 15:47:09 +0800</pubDate>
+      <title></title>
+      <link>https://une.xzgl.site/posts/quote/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pm.xzgl.site/posts/quote/</guid>
-      <description>读过一本好书,像交了一个益友</description>
-    </item>
-    
-    <item>
-      <title>second</title>
-      <link>https://pm.xzgl.site/posts/second/</link>
-      <pubDate>Sat, 04 Mar 2023 15:47:09 +0800</pubDate>
-      
-      <guid>https://pm.xzgl.site/posts/second/</guid>
-      <description>样式存放</description>
+      <guid>https://une.xzgl.site/posts/quote/</guid>
+      <description>应是天仙狂醉。乱把白云揉碎</description>
     </item>
     
     
     <item>
       <title>哔哔广场</title>
-      <link>https://pm.xzgl.site/bbs/</link>
+      <link>https://une.xzgl.site/bbs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pm.xzgl.site/bbs/</guid>
+      <guid>https://une.xzgl.site/bbs/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>https://une.xzgl.site/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://une.xzgl.site/about/</guid>
+      <description>最近在听 loading...（数据读取中...加载失败请刷新） 在看的 9.7 进击的巨人 最终季 完结篇 前篇 9.1 最后生还者 第一季 想看的电影 7.5 沼泽深处的女孩</description>
     </item>
     
     
     <item>
       <title>我的观影</title>
-      <link>https://pm.xzgl.site/movies/</link>
+      <link>https://une.xzgl.site/movies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pm.xzgl.site/movies/</guid>
+      <guid>https://une.xzgl.site/movies/</guid>
       <description></description>
     </item>
     
     <item>
       <title>我的相册</title>
-      <link>https://pm.xzgl.site/gallery/</link>
+      <link>https://une.xzgl.site/gallery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pm.xzgl.site/gallery/</guid>
+      <guid>https://une.xzgl.site/gallery/</guid>
       <description></description>
     </item>
     
     <item>
       <title>我的相册</title>
-      <link>https://pm.xzgl.site/photos/</link>
+      <link>https://une.xzgl.site/photos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pm.xzgl.site/photos/</guid>
+      <guid>https://une.xzgl.site/photos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>我的阅读</title>
-      <link>https://pm.xzgl.site/books/</link>
+      <link>https://une.xzgl.site/books/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pm.xzgl.site/books/</guid>
+      <guid>https://une.xzgl.site/books/</guid>
       <description></description>
     </item>
     

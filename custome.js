@@ -1,4 +1,4 @@
-
+/* gallery */
 document.addEventListener('DOMContentLoaded', () => {
 let galleryPhotos = document.querySelectorAll('.gallery-photos') || ''
 if(galleryPhotos){
@@ -20,3 +20,6 @@ if(galleryPhotos){
 });
 
 window.ViewImage && ViewImage.init('.gallery-photo img')
+
+/* gallery end */
+
