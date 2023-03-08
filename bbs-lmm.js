@@ -2,7 +2,7 @@
 Last Modified time : 20230302 21:32 by https://immmmm.com
 */
 const urls = [
-  {host:"https://memos.xzgljiang.com/",creatorId:"1",imgsrc:"https://pic.xzgljiang.com/i/2023/02/26/63fa44d6c4d6d.png"}
+  {host:"https://memos.xzgljiang.com/",creatorId:"1",imgsrc:"https://pic.xzgljiang.com/i/blog/2023/03/096408f417be5ee.webp"}
 ]
 
 var bbDom = document.querySelector('#bbs');
