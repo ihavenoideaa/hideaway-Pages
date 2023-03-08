@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				          result += `<meting-js id="${songmid}" server="${songtype}" type="song" fixed="false" mini="false" autoplay="false" loop="none" theme="#255579" volume="0.6" prelosd="auto" mutex="true" list-folded="true"></meting-js>`
                   result += `<div style="font-size:17px;font-weight: lighter; margin:15px 0 0 0px;">`
-                  result += `<a href="${songurl}" target="_blank">🎵&nbsp;</a>${comment} <span style="font-size:5px" >(`  + moment(data[i].createdTs * 1000).twitter() + `)</span></div>`
+                  result += `<a href="${songurl}" target="_blank">🎵&nbsp;</a>${comment}<span style="font-size:5px" >(`  + moment(data[i].createdTs * 1000).twitter() + `)</span>&nbsp;🎵</div>`
                   result += `<br/>`
                 }
               });

@@ -15,3 +15,8 @@ ShowWordCount:      false               # 显示字数统计
 
 ### 想看的电影
 {{< douban/movies-wish 4>}}
+
+<br/>
+
+***
+_博客源码: https://github.com/ihavenoideaa/hideaway-Pages_

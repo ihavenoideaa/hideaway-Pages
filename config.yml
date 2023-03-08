@@ -80,9 +80,9 @@ menu:                               # 菜单
       url:        /movies/
       weight:     2
 
-    - identifier: categories
-      name:       分类
-      url:        /categories/
+    - identifier: gallery
+      name:       相册
+      url:        /gallery/
       weight:     3
 
     - identifier: archives
