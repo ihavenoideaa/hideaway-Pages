@@ -10,6 +10,9 @@ ShowToc: true
 ---
 一些效果展示
 
+### 最近在听
+{{< music/listening >}}
+
 ### figure
 {{< figure src="/images/2004gd/2022-12-3 a.png" title="Lighthouse (figure)" >}}
 
@@ -21,7 +24,7 @@ ShowToc: true
 {{< douban/movies-done>}}
 
 ### 豆瓣短代码
-{{< douban/douban-done "https://movie.douban.com/subject/1296339/">}}
+{{< douban/douban-done "https://movie.douban.com/subject/30285826/">}}
 
 ### 近期光影
 {{< photos >}}
@@ -46,9 +49,11 @@ ShowToc: true
 
 
 ### 音乐播放模块 
- {{< music/music id="002e4D4n44U4zE" type="song" server="tencent" >}}
+{{< music/music id="002e4D4n44U4zE" type="song" server="tencent" >}}
 
-<!--{{< music/netease 64803 0 >}}<!--1:自动播放，0：手动  会出现很多错误，但不影响使用-->
+{{< music/music id="64803" type="song" server="netease" >}}
+
+{{< music/netease 64803 0 >}}<!--1:自动播放，0：手动  会出现很多错误，但不影响使用-->
 
 
 {{< music/music-simple-long mp3="/audio/topgun.mp3">}}

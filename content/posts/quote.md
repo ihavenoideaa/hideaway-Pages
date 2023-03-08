@@ -1,5 +1,5 @@
 ---
-title: "书山有路勤为径"
+title: ""
 description: ""
 #date: 2023-03-04T15:47:09+08:00
 draft:              false               # 草稿模式
@@ -11,7 +11,5 @@ hidemetaL: true
 hideSummary: false
 ---  
 
-{{< blockquote author="" link="https://irithys.com" title="《寻梦环游记》" >}}
-死亡不是一切的终点，遗忘才是。
-{{< /blockquote >}}
+>应是天仙狂醉。乱把白云揉碎
 

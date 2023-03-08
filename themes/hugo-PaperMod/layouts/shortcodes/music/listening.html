@@ -1,0 +1,65 @@
+<div id="songlist">loading...（数据读取中...加载失败请刷新）</div>
+<!-- require APlayer -->
+<script type="text/javascript" src="/APlayer.min.js"></script>
+
+<script type="text/javascript" src="/moment.min.js"></script>
+<script type="text/javascript" src="/moment.twitter.js"></script>
+<!-- require MetingJS -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    let limit = 3
+    var memoUrl = "https://memos.xzgljiang.com/"            // memos url
+    //var creatorId = 101
+    //var galleryUrl = memoUrl+"api/memo?creatorId="+creatorId+"&rowStatus=NORMAL&limit="+limit+"&tag=相册"
+    var galleryUrl = memoUrl+"api/memo/all?rowStatus=NORMAL&limit="+limit+"&tag=最近在听"
+    let nowNum = 1;
+    fetch(galleryUrl).then(res => res.json()).then( resdata =>{
+        var result = '',resultAll="",data = resdata.data
+        for(var i=0;i < data.length;i++){
+            var songMemos = data[i].content.replace("#最近在听 ",'')   			// songMemos 标签后的全部信息 
+            var songinfo = songMemos.match(/\[(.*?)\s*(.*?)\]\((.*?)\)/g)		// songinfo []() 符合这个格式的信息
+            var comment = songMemos.split(songinfo)[1]                          // []()后的评论
+            //解析 content 内 md 格式图片
+            if(songinfo){
+              songinfo.forEach(item => {
+                if(nowNum < limit ){
+                  nowNum ++
+                  let songurl = item.replace(/\[.*?\]\((.*?)\)/g,'$1'),			// 括号内的url
+                      singer, songname, tmp = item.replace(/\[(.*?)\]\(.*?\)/g,'$1');	// [time title]
+                  if (tmp.indexOf(' ') != -1) {
+                      singer = tmp.split(' ')[0];
+                      songname = tmp.split(' ')[1];
+                  } else songname = tmp
+				  
+                    var tencenttype = songurl.match(/y\.qq\.com\/n\/ryqq\/songDetail/g)
+					          var neteasetype = songurl.match(/music\.163\.com/g)
+					          var songtype = ''	
+                    var songmid = ''			
+				            // 链接是qq音乐的
+					          if(tencenttype) {
+						        songtype = 'tencent'
+
+					          // QQ 音乐直链https://y.qq.com/n/ryqq/songDetail/002e4D4n44U4zE  网易云https://music.163.com/#/song?id=64803 netease
+					          songmid = songurl.split('/songDetail/')[1]
+				            }
+					          // 链接是网易云的
+					          if(neteasetype) {
+						        songtype = 'netease'
+						        songmid = songurl.split('id=')[1]
+					          }
+
+				          result += `<meting-js id="${songmid}" server="${songtype}" type="song" fixed="false" mini="false" autoplay="false" loop="none" theme="#255579" volume="0.6" prelosd="auto" mutex="true" list-folded="true"></meting-js>`
+                  result += `<div style="font-size:17px;font-weight: lighter; margin:15px 0 0 0px;">`
+                  result += `<a href="${songurl}" target="_blank">🎵&nbsp;</a>${comment} <span style="font-size:5px" >(`  + moment(data[i].createdTs * 1000).twitter() + `)</span></div>`
+                  result += `<br/>`
+                }
+              });
+            }
+        }
+        var songDom = document.querySelector('#songlist');
+        songDom.innerHTML = result
+
+    });
+});
+</script>

@@ -241,7 +241,6 @@ function updateHTMl(data){
   var bbAfter = "</ul></section>"
   resultAll = bbBefore + result + bbAfter
   bbDom.insertAdjacentHTML('beforeend', resultAll);
-  fetchDB()
   var btn = document.querySelector('button.button-load')
   if(btn){
     btn.textContent= '加载更多';

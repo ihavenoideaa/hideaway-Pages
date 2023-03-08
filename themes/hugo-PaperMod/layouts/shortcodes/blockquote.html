@@ -44,7 +44,7 @@
   {{ end }}
 {{ end }}
 
-<blockquote>
+<blockquote style="border-inline-start: 0px">
   <p style="padding:5px 20px 20px 20px;margin-bottom: 0px;">{{ .Inner | markdownify }}</p>
   <footer style="text-align:right;padding: 0px 20px 1  0px 20px;">
     <strong>{{ with $.Scratch.Get "bl_author" }}{{ . }}{{ end }}</strong>

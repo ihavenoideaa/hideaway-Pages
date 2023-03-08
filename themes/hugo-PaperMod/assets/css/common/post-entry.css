@@ -19,10 +19,15 @@
     line-height: 1.3;
 }
 
+/* 第一篇文章 */
 .first-entry .entry-content {
     margin: 14px 0;
     font-size: 16px;
-    -webkit-line-clamp: 3;
+    overflow: hidden;/* //超出部分隐藏 */
+    /* 设置盒子样式，-webkit-是兼容前缀    Gecko 、Mozilla Firefox浏览器 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;  /*行数*/
 }
 
 .first-entry .entry-footer {

@@ -7,11 +7,11 @@ ShowPostNavLinks:   false               # 上一个帖/下一帖
 ShowWordCount:      false               # 显示字数统计
 ---
 
-### 这段时间最喜欢听的歌
-{{< music/netease 64803 0 >}}
+### 最近在听
+{{< music/listening >}}
 
 ### 在看的
 {{< douban/movies-doing >}}
 
 ### 想看的电影
-{{< douban/movies-wish >}}
+{{< douban/movies-wish 4>}}
