@@ -5,14 +5,33 @@
     <loc>https://une.xzgl.site/posts/quote/</loc>
   </url><url>
     <loc>https://une.xzgl.site/categories/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+  </url><url>
+    <loc>https://une.xzgl.site/categories/intro/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+  </url><url>
+    <loc>https://une.xzgl.site/tags/main/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+  </url><url>
+    <loc>https://une.xzgl.site/series/no/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
   </url><url>
     <loc>https://une.xzgl.site/posts/</loc>
-  </url><url>
-    <loc>https://une.xzgl.site/search/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
   </url><url>
     <loc>https://une.xzgl.site/series/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+  </url><url>
+    <loc>https://une.xzgl.site/posts/shortcodes/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
   </url><url>
     <loc>https://une.xzgl.site/tags/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+  </url><url>
+    <loc>https://une.xzgl.site/</loc>
+    <lastmod>2023-03-04T15:47:09+08:00</lastmod>
+  </url><url>
+    <loc>https://une.xzgl.site/search/</loc>
   </url><url>
     <loc>https://une.xzgl.site/bbs/</loc>
   </url><url>
@@ -27,7 +46,5 @@
     <loc>https://une.xzgl.site/photos/</loc>
   </url><url>
     <loc>https://une.xzgl.site/books/</loc>
-  </url><url>
-    <loc>https://une.xzgl.site/</loc>
   </url>
 </urlset>
