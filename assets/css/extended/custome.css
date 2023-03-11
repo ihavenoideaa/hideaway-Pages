@@ -314,3 +314,14 @@ photos .photo:last-child {
 }
 /*game card end*/
 
+/* links css */
+.links-item{padding:10px 15px;font-size:14px;width:49%;box-sizing:border-box;display:inline-block;vertical-align:top;background: #fafafa;
+  background: var(--code-bg);border-radius: 4px;}
+.links-item img{border-radius:4px;float:left;width:32px;height:32px;background: #fff;}
+.links-item a{display: block;padding:5px 0px 12px 12px;margin-left:35px;word-break: keep-all;height: 32px;overflow: hidden;}
+.links-item{width:135px;margin:0 12px 8px 0;}
+@media only screen and (max-width:683px) {
+.links-item{width:144px;margin:0 0 8px;}
+}
+.dark .links-item{background: #252627;background: var(--code-bg);}
+/* links css end */

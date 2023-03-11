@@ -2,7 +2,7 @@
 title: "Shortcodes"
 description: "样式存放"
 date: 2023-03-04T15:47:09+08:00
-draft: true                            # 草稿模式  
+draft: ture                            # 草稿模式  
 tags: ["main"]
 categories: ["intro"]
 series: ["no"]
@@ -27,7 +27,7 @@ ShowToc: true
 {{< douban/douban-done "https://movie.douban.com/subject/30285826/">}}
 
 ### 近期光影
-{{< photos >}}
+{{< pic/photos >}}
 
 ### 相册短代码
 {{< pic/gallery "images/2004gd">}}
@@ -39,13 +39,16 @@ ShowToc: true
 
 
 ### 游戏短代码
-{{< game "https://www.yystv.cn/g/4437/">}}
+{{< misc/game "https://www.yystv.cn/g/4437/">}}
 
 ### 文章内链
-{{< innerlink src="posts/quote.md" >}}  
+{{< misc/innerlink src="posts/quote.md" >}}  
 
 2. [quote]({{< ref "quote.md" >}})
 3. [quote]({{< relref "quote.md" >}})
+
+### 块链接
+{{< misc/links name="Elizen" url="https://elizen.me/" md5="f65df4d87240feb1cb247857a621a48f" des="">}}
 
 
 ### 音乐播放模块 
@@ -84,18 +87,18 @@ ShowToc: true
 
 
 ### 终端短代码
-{{< terminal "yandaojiang@Daojiang-macbook-pro" >}} [ydj-macbook-pro ~ % wget google.com --2023-01-28 16:21:18-- http://google.com/ 正在解析主机 google.com (google.com)... 198.18.4.194 正在连接 google.com (google.com)|198.18.4.194|:80... 已连接。 已发出 HTTP 请求，正在等待回应... 301 Moved Permanently 位置：http://www.google.com/ [跟随至新的 URL] --2023-01-28 16:21:18-- http://www.google.com/ 正在解析主机 www.google.com (www.google.com)... 198.18.0.13 正在连接 www.google.com (www.google.com)|198.18.0.13|:80... 已连接。 已发出 HTTP 请求，正在等待回应... 200 OK 长度：未指定 [text/html] 正在保存至: “index.html”
+{{< misc/terminal "yandaojiang@Daojiang-macbook-pro" >}} [ydj-macbook-pro ~ % wget google.com --2023-01-28 16:21:18-- http://google.com/ 正在解析主机 google.com (google.com)... 198.18.4.194 正在连接 google.com (google.com)|198.18.4.194|:80... 已连接。 已发出 HTTP 请求，正在等待回应... 301 Moved Permanently 位置：http://www.google.com/ [跟随至新的 URL] --2023-01-28 16:21:18-- http://www.google.com/ 正在解析主机 www.google.com (www.google.com)... 198.18.0.13 正在连接 www.google.com (www.google.com)|198.18.0.13|:80... 已连接。 已发出 HTTP 请求，正在等待回应... 200 OK 长度：未指定 [text/html] 正在保存至: “index.html”
 index.html [ <=> ] 14.67K --.-KB/s 用时 0.07s
-2023-01-28 16:21:19 (209 KB/s) - “index.html” 已保存 [15021] [ydj-macbook-pro ~ % {{< /terminal >}}
+2023-01-28 16:21:19 (209 KB/s) - “index.html” 已保存 [15021] [ydj-macbook-pro ~ % {{< /misc/terminal >}}
 
 ### bilibli
-<!--{{< bilibili BV1NF411J7JH >}}-->
+<!--{{< misc/bilibili BV1NF411J7JH >}}-->
 
 ### ppt短代码
-{{< ppt src="https://www.sulvblog.cn//ppt/%E6%9C%80%E5%85%A8Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8.pdf" >}} 
+{{< misc/ppt src="https://www.sulvblog.cn//ppt/%E6%9C%80%E5%85%A8Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8.pdf" >}} 
 
 ### 时间轴
-{{< timeline >}}
+{{< misc/timeline >}}
 
 <div class="timeline-item">
     <div class="timeline-img"></div>
@@ -166,5 +169,5 @@ index.html [ <=> ] 14.67K --.-KB/s 用时 0.07s
         <a class="bnt-more" href="https://google.github.io/tcmalloc/" target="_blank">More</a>
     </div>
 </div>
-{{< /timeline >}}
+{{< /misc/timeline >}}
 
