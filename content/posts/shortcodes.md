@@ -2,11 +2,19 @@
 title: "Shortcodes"
 description: "样式存放"
 date: 2023-03-04T15:47:09+08:00
-draft: ture                            # 草稿模式  
+draft: true                                # 草稿模式  
 tags: ["main"]
 categories: ["intro"]
 series: ["no"]
 ShowToc: true
+hideSummary: false
+ShowBreadCrumbs: true
+summary: "一些效果展示"
+cover:
+    image: "/images/2004gd/2022-12-3 那么.jpg"
+    alt: "image"
+    caption: "<caption>"
+    relative: true
 ---
 一些效果展示
 
@@ -14,10 +22,12 @@ ShowToc: true
 {{< music/listening >}}
 
 ### figure
-{{< figure src="/images/2004gd/2022-12-3 a.png" title="Lighthouse (figure)" >}}
+{{< pic/figure src="/images/2004gd/2022-12-3 a.png" title="标题" >}}
+
+
 
 ### image
-{{< pic/image url="/images/2004gd/2022-12-3 a.png" discribe="◎图1. 通过 Hugo shortcode 插入图片，并在图片底部加入图片描述">}}
+{{< pic/image url="/images/2004gd/2022-12-3 a.png" discribe="图1. 通过 Hugo shortcode 插入图片，并在图片底部加入图片描述">}}
 
 
 ### 近期观影

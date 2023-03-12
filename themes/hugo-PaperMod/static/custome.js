@@ -18,8 +18,7 @@ if(galleryPhotos){
   });
 }
 });
-
-window.ViewImage && ViewImage.init('.gallery-photo img')
-
 /* gallery end */
 
+/* 全局灯箱 */
+window.ViewImage && ViewImage.init('.post-content img:not(.avatar,.tk-avatar-img)')
