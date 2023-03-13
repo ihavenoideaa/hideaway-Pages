@@ -21,4 +21,4 @@ if(galleryPhotos){
 /* gallery end */
 
 /* 全局灯箱 */
-window.ViewImage && ViewImage.init('.post-content img:not(.avatar,.tk-avatar-img)')
+window.ViewImage && ViewImage.init('.post-content img:not(.avatar,.tk-avatar-img)');

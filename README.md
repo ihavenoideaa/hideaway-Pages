@@ -1,4 +1,6 @@
-### Hightaway隐匿处
+### Hideaway 隐匿的地方
+<div style="font-size:1px; font-weight:100;">https://une.xzgl.site</div>
+
 
 #### Pages bulid by [hugo](https://gohugo.io/)
 
@@ -12,7 +14,7 @@ _内容还少，等慢慢丰富起来_
 ##### 实现：
 * bbs
 * 豆瓣读书观影记录
-* 豆瓣记录Github Action自动同步
+* 豆瓣观影阅读数据Github Action自动获取和更新 
 * 基于memos同步的最近光影、最近听歌
 * 瀑布流相册
 * Github Action自动构建并部署到分支gh-pages
