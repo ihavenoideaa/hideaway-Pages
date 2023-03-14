@@ -1,6 +1,4 @@
-### Hideaway 隐匿的地方
-<div style="font-size:1px; font-weight:100;">https://une.xzgl.site</div>
-
+### Hideaway [隐匿的地方](https://une.xzgl.site)
 
 #### Pages bulid by [hugo](https://gohugo.io/)
 
