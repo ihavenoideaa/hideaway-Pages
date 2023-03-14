@@ -8,7 +8,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    let limit = 3
+    let limit = 2
     var memoUrl = "https://memos.xzgljiang.com/"            // memos url
     //var creatorId = 101
     //var galleryUrl = memoUrl+"api/memo?creatorId="+creatorId+"&rowStatus=NORMAL&limit="+limit+"&tag=相册"
@@ -32,27 +32,48 @@ document.addEventListener("DOMContentLoaded", () => {
                       songname = tmp.split(' ')[1];
                   } else songname = tmp
 				  
-                    var tencenttype = songurl.match(/y\.qq\.com\/n\/ryqq\/songDetail/g)
-					          var neteasetype = songurl.match(/music\.163\.com/g)
-					          var songtype = ''	
-                    var songmid = ''			
+                  var tencenttype = songurl.match(/y\.qq\.com\/n\/ryqq\/songDetail/g)
+					        var neteasetype = songurl.match(/music\.163\.com/g)
+                  var spotify = songurl.match(/open\.spotify\.com/g)
+					        var songtype = ''	
+                  var songmid = ''
+                  if(tencenttype || neteasetype){
 				            // 链接是qq音乐的
 					          if(tencenttype) {
-						        songtype = 'tencent'
-
-					          // QQ 音乐直链https://y.qq.com/n/ryqq/songDetail/002e4D4n44U4zE  网易云https://music.163.com/#/song?id=64803 netease
-					          songmid = songurl.split('/songDetail/')[1]
+						          songtype = 'tencent'
+					            // QQ 音乐直链https://y.qq.com/n/ryqq/songDetail/002e4D4n44U4zE  网易云https://music.163.com/#/song?id=64803 netease
+					            songmid = songurl.split('/songDetail/')[1]
 				            }
 					          // 链接是网易云的
 					          if(neteasetype) {
-						        songtype = 'netease'
-						        songmid = songurl.split('id=')[1]
+						          songtype = 'netease'
+						          songmid = songurl.split('id=')[1]
 					          }
-
-				          result += `<meting-js id="${songmid}" server="${songtype}" type="song" fixed="false" mini="false" autoplay="false" loop="none" theme="#255579" volume="0.6" prelosd="auto" mutex="true" list-folded="true"></meting-js>`
-                  result += `<div style="font-size:17px;font-weight: lighter; margin:15px 0 0 0px;">`
-                  result += `<a href="${songurl}" target="_blank">🎵&nbsp;</a>${comment}<span style="font-size:5px" >(`  + moment(data[i].createdTs * 1000).twitter() + `)</span>&nbsp;🎵</div>`
-                  result += `<br/>`
+				            result += `<meting-js id="${songmid}" server="${songtype}" type="song" fixed="false" mini="false" autoplay="false" loop="none" theme="#255579" volume="0.6" prelosd="auto" mutex="true" list-folded="true"></meting-js>`
+                    result += `<div style="font-size:17px;font-weight: lighter; margin:5px 0 0 5px;">`
+                    if(Object.keys(comment).length === 0){
+                    } else{
+                      result += `Memo:“${comment}”`
+                    }
+                    result += `<span style="font-size:5px; text-align: right;display: block; margin-right:4px" ><a href="${songurl}" target="_blank">[♬]</a> [ `  + moment(data[i].createdTs * 1000).twitter() + ` ]</span>&nbsp;</div>`
+                  }
+                  // 链接是spotify的链接
+                  if(spotify){
+                    songtype = songurl.split('spotify.com/')[1].split('/')[0]
+                    songmid = songurl.split('spotify.com/')[1].split('/')[1]
+                    if(songtype == "track")
+                    {
+                      result += `<iframe src="https://open.spotify.com/embed/${songtype}/${songmid}/" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
+                    }else{
+                      result += `<iframe src="https://open.spotify.com/embed/${songtype}/${songmid}/" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
+                    }
+                    result += `<div style="font-size:17px;font-weight: lighter; margin:5px 0 0 5px;">`
+                    if(Object.keys(comment).length === 0){
+                    } else{
+                      result += `Memo:“${comment}”`
+                    }
+                    result += `<span style="font-size:5px; text-align: right;display: block; margin-right:4px" ><a href="${songurl}" target="_blank">[♬]</a> [ `  + moment(data[i].createdTs * 1000).twitter() + ` ]</span>&nbsp;</div>`
+                  }
                 }
               });
             }

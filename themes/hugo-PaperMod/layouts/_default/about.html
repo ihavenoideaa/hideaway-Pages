@@ -50,9 +50,9 @@
     {{- end }}
   </footer>
 <!-- 评论模块 -->
-  {{- if (.Param "comments") }}
-  {{- partial "comments.html" . }}
-  {{- end }}
+{{- if (.Param "comments") }}
+{{- partial "comments.html" . }}
+{{- end }}
 </article>
 
 {{- end }}{{/* end main */}}

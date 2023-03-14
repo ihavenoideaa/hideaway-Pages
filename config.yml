@@ -51,7 +51,8 @@ params:
       ShowToc:                false       # 显示文章目录
       TocOpen:                false       # 文章目录默认打开/关闭
       ShowWordCount:          true        # 显示字数统计
-    
+      comments:               false       # 开启评论
+
       description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
       
       cover:                              # 封面图属性
