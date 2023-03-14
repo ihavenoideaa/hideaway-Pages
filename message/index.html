@@ -22,12 +22,14 @@
 <script type="text/javascript" src="/lately.min.js"></script>
 <script type="text/javascript" src="/custome.js"></script>
 <meta name="robots" content="index, follow">
-<title>Categories | 阅读观影记录</title>
+<title>留言板 | 阅读观影记录</title>
 <meta name="keywords" content="">
-<meta name="description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod">
+<meta name="description" content="留言板 - 阅读观影记录">
 <meta name="author" content="">
-<link rel="canonical" href="https://une.xzgl.site/categories/">
+<link rel="canonical" href="https://une.xzgl.site/message/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.403d47799ccb23d8d1221bbfa5c1f9c8163930143f0f530eed5f35ecf2f44e3b.css" integrity="sha256-QD1HeZzLI9jRIhu/pcH5yBY5MBQ/D1MO7V817PL0Tjs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://une.xzgl.site/icon/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://une.xzgl.site/icon/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="https://une.xzgl.site/icon/favicon.ico">
@@ -35,7 +37,6 @@
 <link rel="mask-icon" href="https://une.xzgl.site/icon/favicon.ico">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://une.xzgl.site/categories/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -44,18 +45,64 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Categories" />
-<meta property="og:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://une.xzgl.site/categories/" />
+</noscript><meta property="og:title" content="留言板" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://une.xzgl.site/message/" /><meta property="article:section" content="" />
+
+
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"/>
+<meta name="twitter:title" content="留言板"/>
+<meta name="twitter:description" content=""/>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "留言板",
+      "item": "https://une.xzgl.site/message/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "留言板",
+  "name": "留言板",
+  "description": "",
+  "keywords": [
+    
+  ],
+  "articleBody": "",
+  "wordCount" : "0",
+  "inLanguage": "zh-cn",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://une.xzgl.site/message/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "阅读观影记录",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://une.xzgl.site/icon/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -137,15 +184,25 @@
     </nav>
 </header>
 <main class="main">
-<header class="page-header">
-    <h1>Categories</h1>
-</header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="https://une.xzgl.site/categories/movies/">movies <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-</ul>
+
+<div>
+    <div>
+        <span style="font-size: 20px;">💬留言</span>
+        <hr />
+    </div>
+    <div id="tcomment"></div>
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.10/dist/twikoo.all.min.js  "></script>
+    <script>
+        twikoo.init({
+            envId: 'http://38.60.33.16:7080/',  
+            el: "#tcomment",
+            lang: 'zh-CN',
+            region: 'ap-guangzhou',  
+            path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+        });
+    </script>
+</div>
     </main>
     
 
@@ -252,6 +309,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'COPY';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = 'COPY';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
