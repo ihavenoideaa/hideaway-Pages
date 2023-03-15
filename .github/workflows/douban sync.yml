@@ -16,8 +16,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.personal_token }}
+      with:
+        token: ${{ secrets.personal_token }}
 
     - name: Create local changes
       run: |
