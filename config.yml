@@ -81,9 +81,9 @@ menu:                               # 菜单
       url:        /movies/
       weight:     2
 
-    - identifier: gallery
+    - identifier: photos
       name:       相册
-      url:        /gallery/
+      url:        /photos/
       weight:     3
 
     - identifier: archives
