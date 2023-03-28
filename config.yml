@@ -96,7 +96,12 @@ menu:                               # 菜单
       url:        /bbs/
       weight:     5
 
+    - identifier: message
+      name:       留言
+      url:        /message/
+      weight:     6
+
     - identifier: about
       name:       关于
       url:        /about/
-      weight:     6   
+      weight:     7   

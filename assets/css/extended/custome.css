@@ -397,13 +397,14 @@ photos .photo:last-child {
 }
 .listening-bg .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar{
   height: 4px;
-  border-radius: 0.125rem
+  border-radius: 0.125rem;
+  background: hsla(0,0%,100%,.3);
 }
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
   background: #91b0e3;
   height: 4px;
 }
-.aplayer .listening-bg .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
+.listening-bg .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
   background: #fff !important;
   height: 4px;
 }
