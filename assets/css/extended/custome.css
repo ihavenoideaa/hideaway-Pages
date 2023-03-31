@@ -395,21 +395,31 @@ photos .photo:last-child {
   color: #fff;
   letter-spacing: 4px;
 }
+.listening-bg  .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap{
+  padding: 3px 0;
+}
 .listening-bg .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar{
   height: 4px;
   border-radius: 0.125rem;
-  background: hsla(0,0%,100%,.3);
+  background: hsla(0,0%,100%,0.3);
 }
-.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+.listening-bg .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
   background: #91b0e3;
+  border-radius: 0.125rem;
   height: 4px;
 }
+.dark .listening-bg .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+  background: hsla(0, 0%, 100%, 0.3);
+}
+
 .listening-bg .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
   background: #fff !important;
+  border-radius: 0.125rem;
   height: 4px;
 }
 .listening-bg .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
   background: #fff !important;
+  margin-top:-3px;
 }
 .listening-bg .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar .aplayer-volume{
   background: #fff !important;
