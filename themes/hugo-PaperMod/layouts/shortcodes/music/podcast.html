@@ -10,10 +10,10 @@
 <meta charset="UTF-8">
 <div class="container">
     <div class="podcast">
-      <h3 class="podcast__episode_title">Debugging Tools + Tips</h3>
+      <h3 class="podcast__episode_title">{{ .Get "title" }}</h3>
       <h5 class="podcast__title">
-        Syntax.fm
-        <i>Episode 152</i>
+        {{ .Get "author" }}
+        <i>{{ .Get "album" }}</i>
       </h5>
       <div class="podcast__meta">
         <audio controls width="100%" id="podcast">

@@ -2,7 +2,7 @@
 title: "Shortcodes"
 description: "样式存放"
 date: 2023-03-04T15:47:09+08:00
-draft: true                                # 草稿模式  
+draft: false                                # 草稿模式  
 tags: ["main"]
 categories: ["intro"]
 series: ["no"]
@@ -73,7 +73,7 @@ cover:
 
 {{< music/music-simple-short src="/audio/topgun.mp3" caption="标题" >}}
 
-{{< music/podcast src="https://file.yandaojiang.com/blog/music/topgun.mp3" img="https://file.yandaojiang.com/blog/music/1.png" >}}
+{{< music/podcast title="title" author="author" album="album" src="https://file.yandaojiang.com/blog/music/topgun.mp3" img="https://file.yandaojiang.com/blog/music/1.png" >}}
 
 ### gist
 {{< gist spf13 7896402 >}}  <!--# gist仓库 https://gist.github.com/spf13/7896402-->
