@@ -6,13 +6,31 @@
     <description>Recent content in Categories on 阅读观影记录</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 Mar 2023 00:30:07 +0800</lastBuildDate><atom:link href="https://une.xzgl.site/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Mar 2023 21:18:53 +0800</lastBuildDate><atom:link href="https://une.xzgl.site/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>music</title>
+      <link>https://une.xzgl.site/categories/music/</link>
+      <pubDate>Fri, 31 Mar 2023 21:18:53 +0800</pubDate>
+      
+      <guid>https://une.xzgl.site/categories/music/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>movies</title>
       <link>https://une.xzgl.site/categories/movies/</link>
       <pubDate>Sun, 12 Mar 2023 00:30:07 +0800</pubDate>
       
       <guid>https://une.xzgl.site/categories/movies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intro</title>
+      <link>https://une.xzgl.site/categories/intro/</link>
+      <pubDate>Sat, 04 Mar 2023 15:47:09 +0800</pubDate>
+      
+      <guid>https://une.xzgl.site/categories/intro/</guid>
       <description></description>
     </item>
     
