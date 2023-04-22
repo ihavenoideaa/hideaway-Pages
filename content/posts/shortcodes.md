@@ -8,7 +8,7 @@ categories: ["intro"]
 series: ["no"]
 ShowToc: true
 hideSummary: false
-ShowBreadCrumbs: true
+ShowBreadCrumbs: false
 summary: "一些效果展示"
 cover:
     image: "/images/2004gd/2022-12-3 那么.jpg"
