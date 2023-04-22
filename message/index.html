@@ -181,17 +181,21 @@
     <span style="font-size: 20px;">💬留言</span>
     <hr />
 </div>
+<script>
+    window.TWIKOO_MAGIC_PATH="MessageBoard";
+</script>
 
 <div>
     <div id="tcomment"></div>
-    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.11/dist/twikoo.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.16/dist/twikoo.all.min.js"></script>
     <script>
+
         twikoo.init({
             envId: 'https://twikoo.une.xzgljiang.com/',  
             el: "#tcomment",
             lang: 'zh-CN',
             region: 'ap-guangzhou',  
-            path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+            path: window.TWIKOO_MAGIC_PATH||window.location.href,
         });
     </script>
 </div>
